@@ -1,0 +1,49 @@
+;
+; HotkeybasedKeyloggerDetector.inf
+;
+
+[Version]
+Signature="$WINDOWS NT$"
+Class=System
+ClassGuid={4d36e97d-e325-11ce-bfc1-08002be10318}
+Provider=%ManufacturerName%
+DriverVer=02/12/2025,1.0.0.0
+CatalogFile=HotkeybasedKeyloggerDetector.cat
+PnpLockdown=1
+
+[DestinationDirs]
+DefaultDestDir = 12
+
+[SourceDisksNames]
+1 = %DiskName%,,,  ; Disk description
+
+[SourceDisksFiles]
+HotkeybasedKeyloggerDetector.sys = 1  ; Driver binary file
+
+[Manufacturer]
+%ManufacturerName%=Standard,NTamd64  ; Assuming 64-bit Windows
+
+[Standard.NTamd64]
+%DeviceName%=HotkeyKeyloggerDetector_Install, ROOT\HotkeyKeyloggerDetector
+
+[HotkeyKeyloggerDetector_Install]
+CopyFiles=HotkeyKeyloggerDetector.CopyFiles
+
+[HotkeyKeyloggerDetector_Install.Services]
+AddService=HotkeyKeyloggerDetector,0x00000002,HotkeyKeyloggerDetector_ServiceInstall
+
+[HotkeyKeyloggerDetector.CopyFiles]
+HotkeybasedKeyloggerDetector.sys
+
+[HotkeyKeyloggerDetector_ServiceInstall]
+DisplayName=%ServiceName%
+ServiceType=1                  ; SERVICE_KERNEL_DRIVER
+StartType=3                    ; SERVICE_DEMAND_START
+ErrorControl=1                 ; SERVICE_ERROR_NORMAL
+ServiceBinary=%12%\HotkeybasedKeyloggerDetector.sys
+
+[Strings]
+ManufacturerName="Hotkey-based Keylogger Detector";
+DeviceName="Hotkey-based Keylogger Detector"
+ServiceName="Hotkey-based Keylogger Detector"
+DiskName="HotkeybasedKeyloggerDetector"

@@ -22,7 +22,7 @@ sc delete HotkeybasedKeyloggerDetector
 
 * **Demo Video**
 
-This demo showcases how this detection tool detects [Hotkeyz](https://github.com/yo-yo-yo-jbo/hotkeyz), a proof-of-concept hotkey-based keylogger created by [Jonathan Bar Or](https://jonathanbaror.com/)
+This demo showcases how this detection tool detects [Hotkeyz](https://github.com/yo-yo-yo-jbo/hotkeyz), a proof-of-concept hotkey-based keylogger created by [Jonathan Bar Or](https://jonathanbaror.com/)　(To view log messages in [DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview), you need to build the drive in "Debug" mode.)
 
 https://github.com/user-attachments/assets/4eacaa4e-6d6d-4014-ae4c-b1c1c7d8fd2e
 

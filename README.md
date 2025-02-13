@@ -26,7 +26,7 @@ This demo showcases how this detection tool detects [Hotkeyz](https://github.com
 
 https://github.com/user-attachments/assets/4eacaa4e-6d6d-4014-ae4c-b1c1c7d8fd2e
 
-(To view log messages in [DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview), you need to build the drive in "Debug" mode.)
+(To view log messages in [DebugView](https://learn.microsoft.com/en-us/sysinternals/downloads/debugview), you need to build the driver in "Debug" mode.)
 
 ## Disclamer
 

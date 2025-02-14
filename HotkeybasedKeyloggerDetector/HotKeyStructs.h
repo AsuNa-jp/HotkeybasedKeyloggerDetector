@@ -39,7 +39,7 @@ typedef struct _HOT_KEY {
 #ifdef _AMD64_
     PADDING32 pad;
 #endif
-    struct _HOT_KEY* slist;
+    struct _HOT_KEY* pNext;
 } HOT_KEY, * PHOT_KEY;
 
 typedef struct _KLDR_DATA_TABLE_ENTRY

@@ -205,8 +205,8 @@ FindIsHotKeyFunction(
  * Function: ResolvegphkHashTableAddress
  * -----------------------------
  * Scans a memory region for a LEA rbx (opcode 0x48, 0x8D, 0x1D [32bit offset]) 
- * that likely stores the IsHotKey function address. When found, it calculates the absolute address
- * of the target function using the offset.
+ * that stores the gphkHashTable address (offset). When found, it calculates the 
+ * absolute address using the offset.
  * Note - This function is expected to scan the "IsHotkey" function.
  *
  * IsHotKey function
@@ -337,8 +337,8 @@ VOID
 CheckHotkeyNode(
     _In_ const PHOT_KEY& hk)
 {
-    if (MmIsAddressValid(hk->slist)) {
-        CheckHotkeyNode(hk->slist);
+    if (MmIsAddressValid(hk->pNext)) {
+        CheckHotkeyNode(hk->pNext);
     }
 
     // Check whether this is a single numeric hotkey.

@@ -391,7 +391,7 @@ CheckRegisteredHotKeys(
     // Cast the gphkHashTable address to an array of pointers.
     PVOID* tableArray = static_cast<PVOID*>(gphkHashTableAddr);
     // Iterate through the hash table entries.
-    for (USHORT j = 0; j < 0x7f; j++)
+    for (USHORT j = 0; j < 0x80; j++)
     {
         PVOID item = tableArray[j];
         PHOT_KEY hk = reinterpret_cast<PHOT_KEY>(item);
